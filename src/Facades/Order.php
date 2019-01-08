@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Order\Facades;
+namespace Bqrd\OpenApi\PetStore\Facades;
 
-use Bqrd\OpenApi\Order\Product as OpenApiProduct;
+use Bqrd\OpenApi\PetStore\Order as PetStoreOrder;
 use Illuminate\Support\Facades\Facade;
 
-class Product extends Facade
+class Order extends Facade
 {
     /**
      * getFacadeAccessor.
@@ -25,6 +25,6 @@ class Product extends Facade
      */
     public static function getFacadeAccessor()
     {
-        return OpenApiProduct::class;
+        return PetStoreOrder::class;
     }
 }

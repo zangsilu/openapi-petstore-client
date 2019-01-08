@@ -11,10 +11,10 @@
 
 namespace Bqrd\OpenApi\Order\Providers;
 
-use Bqrd\OpenApi\Order\Product;
+use Bqrd\OpenApi\PetStore\Order;
 use Illuminate\Support\ServiceProvider;
 
-class ProductServiceProvider extends ServiceProvider
+class OrderServiceProvider extends ServiceProvider
 {
     /**
      * defer.
@@ -32,11 +32,11 @@ class ProductServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Product::class, function ($app) {
-            $app->configure('openapi-search-client');
-            $config = $app->make('config')->get('openapi-search-client');
+        $this->app->singleton(Order::class, function ($app) {
+            $app->configure('openapi-petstore-client');
+            $config = $app->make('config')->get('openapi-petstore-client');
 
-            return new Product($config['baseUri'], $config['options']);
+            return new Order($config['baseUri'], $config['options']);
         });
     }
 
@@ -49,6 +49,6 @@ class ProductServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [Product::class];
+        return [Order::class];
     }
 }
