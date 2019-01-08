@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Order;
+namespace Bqrd\OpenApi\PetStore;
 
 use Liugj\Arch\RestClient;
 

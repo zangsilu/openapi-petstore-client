@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\OpenApi\Order\Providers;
+namespace Bqrd\OpenApi\PetStore\Providers;
 
 use Bqrd\OpenApi\PetStore\Order;
 use Illuminate\Support\ServiceProvider;

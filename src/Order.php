@@ -27,10 +27,10 @@ class Order extends Api
         parent :: __construct($baseUri, $options);
     }
 
-    public function getPetStoreOrderStatus(array $input)
+    public function updatePetStoreOrderStatus(array $input)
     {
-        $input['Act'] = 'GetPetStoreOrderStatus';
+        $input['Act'] = 'UpdatePetStoreOrderStatus';
 
-        return $this->restClient->post('?GetPetStoreOrderStatus', $input)->toArray();
+        return $this->restClient->post('?UpdatePetStoreOrderStatus', $input)->toArray();
     }
 }
