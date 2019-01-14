@@ -33,4 +33,16 @@ class Order extends Api
 
         return $this->restClient->post('?UpdatePetStoreOrderStatus', $input)->toArray();
     }
+    
+     /**
+     * 萌宠好物管订单支付完毕后的回调
+     * @param array $input
+     * @return mixed
+     */
+    public function payPetStoreOrderCallback(array $input)
+    {
+        $input['Act'] = 'PayPetStoreOrderCallback';
+
+        return $this->restClient->post('?PayPetStoreOrderCallback', $input)->toArray();
+    }
 }
